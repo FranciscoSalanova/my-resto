@@ -1,0 +1,18 @@
+div {
+    color: red;
+}
+
+.dish {
+    width: 120px;
+    height: auto;
+    border-radius: 5px;
+    background-color: cadetblue;
+}
+
+.menu {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
