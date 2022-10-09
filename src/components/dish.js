@@ -8,9 +8,6 @@ export class Ingredient extends Component {
 }
 
 class Dish extends Component {
-    mensaje = 'Buen provecho!';
-    ingredientes = ['papa', 'tomate', 'aceite'];
-
     render() {
         return (
             <div className='dish'>
@@ -18,12 +15,13 @@ class Dish extends Component {
                 <Ingredient />
                 <ul>
                     {
-                        this.ingredientes.map(ingrediente => {
-                            return <li>{ingrediente}</li>
+                        this.props.ingr.map((ingrediente, index) => {
+                            return <li key={index}>{ingrediente}</li>
                         })
                     }
                 </ul>
-                <p>{ this.mensaje }</p>
+                <p>Cantidad de ingredientes: {this.props.qty}</p>
+                <p>{ this.props.msj }</p>
             </div>
         )
     }
